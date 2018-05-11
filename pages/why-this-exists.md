@@ -1,5 +1,5 @@
 ---
-title: why this exists
+title: Why this exists
 order: 1
 ---
 

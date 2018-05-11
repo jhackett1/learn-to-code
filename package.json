@@ -7,10 +7,13 @@
     "gatsby": "^1.9.247",
     "gatsby-cli": "^1.1.52",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-copy-files": "^1.0.1",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-source-filesystem": "^1.5.35",
     "gatsby-transformer-remark": "^1.7.41",
+    "govuk_template_ejs": "^0.24.0",
+    "npm": "^6.0.1",
     "react-helmet": "^5.2.0",
     "slugify": "^1.2.9"
   },

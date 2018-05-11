@@ -97,7 +97,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
     result.data.pages.edges.forEach(({ node }) => {
       createPage({
-        path: `${slugify(node.frontmatter.title, {
+        path: `page/${slugify(node.frontmatter.title, {
           lower: true
         })}`,
         component: pageTemplate,
