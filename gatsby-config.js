@@ -1,6 +1,32 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'DDaT Codelabs',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    // Ingest markdown files from three locations
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./lessons`,
+        name: "lessons",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./modules`,
+        name: "modules",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./pages`,
+        name: "pages",
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`
+  ]
 }

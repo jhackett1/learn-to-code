@@ -1,13 +1,52 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const IndexPage = () => (
+const CourseOverview = ({ data }) => (
   <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Course overview</h1>
+    {data.modules.edges.map(lesson=>(
+      <li key={lesson.node.frontmatter.title}>
+        <h3>{lesson.node.frontmatter.title}</h3>
+        <p dangerouslySetInnerHTML={{ __html: lesson.node.html }}></p>
+      </li>
+    ))}
   </div>
 )
 
-export default IndexPage
+export default CourseOverview
+
+export const courseOverviewQuery = graphql`
+  query courseOverviewQuery{
+    lessons: allMarkdownRemark (
+      sort: { order: ASC, fields: [frontmatter___order] },
+      filter: {fileAbsolutePath: {regex: "/lessons/.*$/"}}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            module
+            order
+            type
+          }
+        }
+      }
+    }
+    modules: allMarkdownRemark (
+      sort: { order: ASC, fields: [frontmatter___order] },
+      filter: {fileAbsolutePath: {regex: "/modules/.*$/"}}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            order
+            available_from
+            available_to
+          }
+          html
+        }
+      }
+    }
+  }
+`
