@@ -6,6 +6,8 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   const { createPage } = boundActionCreators;
 
   const lessonTemplate = path.resolve('src/templates/lessonTemplate.js')
+  const moduleTemplate = path.resolve('src/templates/moduleTemplate.js')
+  const pageTemplate = path.resolve('src/templates/pageTemplate.js')
 
   return graphql(`
     {
@@ -31,11 +33,42 @@ exports.createPages = ({boundActionCreators, graphql}) => {
           }
         }
       }
+      modules: allMarkdownRemark (
+        sort: { order: ASC, fields: [frontmatter___order] },
+        filter: {fileAbsolutePath: {regex: "/modules/.*$/"}}
+      ) {
+    	  edges {
+    	    node {
+            frontmatter {
+              title
+              order
+              available_from
+              available_to
+            }
+            html
+    	    }
+    	  }
+    	}
+      pages: allMarkdownRemark (
+        sort: { order: ASC, fields: [frontmatter___order] },
+        filter: {fileAbsolutePath: {regex: "/pages/.*$/"}}
+      ) {
+    	  edges {
+    	    node {
+            frontmatter {
+              title
+              order
+            }
+            html
+    	    }
+    	  }
+    	}
     }
   `).then(result => {
     if(result.errors){
       return Promise.reject(result.errors)
     }
+
     result.data.lessons.edges.forEach(({ node }) => {
       createPage({
         path: `lesson/${slugify(node.frontmatter.title, {
@@ -48,5 +81,32 @@ exports.createPages = ({boundActionCreators, graphql}) => {
         }
       })
     })
+
+    result.data.modules.edges.forEach(({ node }) => {
+      createPage({
+        path: `module/${slugify(node.frontmatter.title, {
+          lower: true
+        })}`,
+        component: moduleTemplate,
+        context: {
+          title: node.frontmatter.title,
+          order: node.frontmatter.order
+        }
+      })
+    })
+
+    result.data.pages.edges.forEach(({ node }) => {
+      createPage({
+        path: `${slugify(node.frontmatter.title, {
+          lower: true
+        })}`,
+        component: pageTemplate,
+        context: {
+          title: node.frontmatter.title,
+          order: node.frontmatter.order
+        }
+      })
+    })
+
   })
 }

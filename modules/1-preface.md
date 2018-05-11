@@ -5,4 +5,4 @@ available_from: something
 available_to: something
 ---
 
-Module description goes here
+We're going to build a fully-functioning web app. Here's how.
