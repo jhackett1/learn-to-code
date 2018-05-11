@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const CourseOverview = ({ data }) => (
-  <div>
+  <div className="grid-row">
+    <div className="column-two-thirds">
     <h1>Course overview</h1>
     {data.modules.edges.map(lesson=>(
       <li key={lesson.node.frontmatter.title}>
@@ -10,6 +11,7 @@ const CourseOverview = ({ data }) => (
         <p dangerouslySetInnerHTML={{ __html: lesson.node.html }}></p>
       </li>
     ))}
+    </div>
   </div>
 )
 

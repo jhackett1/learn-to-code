@@ -16,13 +16,19 @@ const Header = ({ title, menu }) => (
       </div>
         <div className="header-proposition">
           <div className="content">
-            <nav id="proposition-menu">
-              <ul id="proposition-links">
-                {menu.edges.map(page=>(
-                  <li key={page.node.frontmatter.title}><Link to={`/page/${slugify(page.node.frontmatter.title, {lower: true})}`}>{page.node.frontmatter.title}</Link></li>
-                ))}
-              </ul>
-            </nav>
+          <a href="#proposition-links" className="js-header-toggle menu">Menu</a>
+          <nav id="proposition-menu">
+            <ul id="proposition-links">
+
+
+            {menu.edges.map(page=>(
+              <li key={page.node.frontmatter.title}><Link to={`/page/${slugify(page.node.frontmatter.title, {lower: true})}`}>{page.node.frontmatter.title}</Link></li>
+            ))}
+
+            </ul>
+          </nav>
+
+
           </div>
         </div>
     </div>
