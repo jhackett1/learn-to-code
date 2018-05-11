@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -12,8 +13,13 @@ import favicon from '../../node_modules/govuk_template_ejs/assets/images/favicon
 
 import './index.sass'
 
-const Layout = ({ children, data }) => (
+const Layout = ({data, children}) => (
   <div>
+    <div id="skiplink-container">
+      <div>
+        <Link to="#" className="skiplink">Skip to main content</Link>
+      </div>
+    </div>
     <Helmet
       title={"meh"}
       meta={[
@@ -26,9 +32,9 @@ const Layout = ({ children, data }) => (
         {rel: "shortcut icon", href: favicon, type: "image/x-icon"}
       ]}
     />
-    <Header menu={data.pages}/>
+    <Header title={data.site.siteMetadata.title} menu={data.pages}/>
     {children()}
-    <Footer/>
+    <Footer menu={data.pages} credit={data.site.siteMetadata.credit}/>
   </div>
 )
 
@@ -43,6 +49,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        credit
       }
     }
     pages: allMarkdownRemark (

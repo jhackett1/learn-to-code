@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'DDaT Codelabs',
+    credit: 'Built and maintained by DDaT Fast Streamers'
   },
   plugins: [
     // Ingest markdown files from three locations
