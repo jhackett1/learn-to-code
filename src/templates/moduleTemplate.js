@@ -4,7 +4,7 @@ const ModuleTemplate = ({ data }) => {
   return(
     <div>
       Module
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
+      <h1 className="heading-xlarge">{data.markdownRemark.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </div>
   )

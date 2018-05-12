@@ -11,17 +11,75 @@
 @import "../../node_modules/govuk-elements-sass/public/sass/elements.scss"
 
 // Fixed width
-#page-container
+.page-container
   @extend %site-width-container
 
-// Grid system
-.grid-row
-  @extend %grid-row
-  .column-third
-    @include grid-column( 1/3 )
-  .column-two-thirds
-    @include grid-column( 2/3 )
+.button-start
+  background-image: url('/arrow.png')
+  background-size: 17px 19px
+  background-position: right 10px center
 
-// Phase banner
-.phase-banner
-  @include phase-banner()
+.hero
+  margin: 0
+  padding: 30px 0px
+  color: $page-colour
+  background-color: $govuk-blue
+  position: relative
+  left: 50%
+  right: 50%
+  margin-left: -50vw
+  margin-right: -50vw
+  width: 100vw
+  max-width: 100vw
+  img
+    width: 100%
+    max-width: 320px
+    margin: 10px
+  h1
+    margin: 0px 0px 30px 0px
+  .button
+    background-color: $page-colour
+    color: $govuk-blue
+    margin-bottom: 10px
+  a
+    color: $page-colour
+
+.course-overview-list
+  margin-top: 50px
+  position: relative
+  &::after
+    content: ""
+    display: block
+    height: calc(100% - 40px)
+    border-left: solid 3px #bfc1c3
+    position: absolute
+    left: 17px
+    top: 40px
+    z-index: 1
+  li
+    padding: 15px 0px
+    margin-left: 60px
+    border-top: solid 2px #dee0e2
+    position: relative
+    span.number
+      position: absolute
+      left: -60px
+      font-weight: bold
+      border: solid 3px #bfc1c3
+      border-radius: 100%
+      width: 30px
+      height: 30px
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      z-index: 2
+      background-color: $page-colour
+
+    h3
+      margin: 0px
+
+@media (min-width: 641px)
+  .course-overview-list
+    li
+      padding: 30px 0px

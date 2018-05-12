@@ -69,7 +69,7 @@ class Layout extends React.Component{
           ]}
         />
         <Header title={data.site.siteMetadata.title} menu={data.pages}/>
-        <main id="page-container">
+        <main id="content">
           <div className="phase-banner">
             <p><strong className="phase-tag">ALPHA</strong><span>This is a new service – your <Link to="/feedback">feedback</Link> will help us to improve it.</span></p>
           </div>

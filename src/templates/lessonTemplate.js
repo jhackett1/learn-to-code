@@ -3,7 +3,7 @@ import React from 'react'
 const LessonTemplate = ({ data }) => {
   return(
     <div>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
+      <h1 className="heading-xlarge">{data.markdownRemark.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </div>
   )

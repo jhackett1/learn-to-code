@@ -2,9 +2,16 @@ import React from 'react'
 
 const PageTemplate = ({ data }) => {
   return(
-    <div>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <div className="grid-row">
+
+      <div className="column-two-thirds">
+        <h1 className="heading-xlarge">{data.markdownRemark.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      </div>
+
+      <div className="column-one-third">
+      </div>
+      
     </div>
   )
 }
