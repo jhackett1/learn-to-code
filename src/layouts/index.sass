@@ -19,14 +19,20 @@
 .page-container
   @extend %site-width-container
 
+// Start button image fix
 .button-start
-  background-image: url('/arrow.png')
+  background-image: url('./arrow.png')
   background-size: 17px 19px
   background-position: right 10px center
 
+// Breadcrumb image fix
 .breadcrumbs li
-  background-image: url('/separator-2x.png')
+  background-image: url('./breadcrumbs-sep.png')
+  background-size: 7px
+  background-position: 0% 50%
+  background-repeat: no-repeat
 
+// Hero section on home
 .hero
   margin: 0
   padding: 30px 0px
@@ -52,6 +58,7 @@
   a
     color: $page-colour
 
+// Course overview timeline list
 .course-overview-list
   margin-top: 50px
   position: relative

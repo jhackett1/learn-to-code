@@ -51,11 +51,6 @@ class Layout extends React.Component{
     let children = this.props.children
     return(
       <div>
-        <div id="skiplink-container">
-          <div>
-            <Link to="#" className="skiplink">Skip to main content</Link>
-          </div>
-        </div>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -69,6 +64,7 @@ class Layout extends React.Component{
           ]}
         />
         <Header title={data.site.siteMetadata.title} menu={data.pages}/>
+        <div id="global-header-bar"></div>        
         <main id="content">
           <div className="phase-banner">
             <p><strong className="phase-tag">ALPHA</strong><span>This is a new service – your <Link to={"/feedback"}>feedback</Link> will help us to improve it.</span></p>
