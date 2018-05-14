@@ -17,7 +17,7 @@ export default () => (
     <div className="grid-row">
       <div className="column-two-thirds">
 
-      <form netlify method="POST">
+      <form netlify name="feedback" method="POST">
         <div className="form-group">
           <fieldset>
             <legend>
