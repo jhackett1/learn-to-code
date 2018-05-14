@@ -1,6 +1,7 @@
 ---
 title: Mentoring
 order: 2
+on_menu: true
 ---
 
 <p class="lede">You can get help with these lessons from fellow learners and our volunteer mentors.</p>

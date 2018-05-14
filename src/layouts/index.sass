@@ -10,6 +10,11 @@
 // Import GOVUK elements
 @import "../../node_modules/govuk-elements-sass/public/sass/elements.scss"
 
+
+// Hide crown
+#global-header #logo
+  background-image: none
+
 // Fixed width
 .page-container
   @extend %site-width-container
@@ -18,6 +23,9 @@
   background-image: url('/arrow.png')
   background-size: 17px 19px
   background-position: right 10px center
+
+.breadcrumbs li
+  background-image: url('/separator-2x.png')
 
 .hero
   margin: 0
@@ -47,7 +55,7 @@
 .course-overview-list
   margin-top: 50px
   position: relative
-  &::after
+  &::before
     content: ""
     display: block
     height: calc(100% - 40px)
@@ -56,7 +64,16 @@
     left: 17px
     top: 40px
     z-index: 1
-  li
+  &::after
+    content: ""
+    display: block
+    border-top: solid 3px #bfc1c3
+    position: absolute
+    bottom: 0px
+    left: 8px
+    width: 20px
+    z-index: 1
+  li.module
     padding: 15px 0px
     margin-left: 60px
     border-top: solid 2px #dee0e2
@@ -75,11 +92,14 @@
       text-align: center
       z-index: 2
       background-color: $page-colour
-
     h3
       margin: 0px
 
+ol.lesson-list
+  li
+    margin-top: 10px
+
 @media (min-width: 641px)
   .course-overview-list
-    li
+    li.module
       padding: 30px 0px

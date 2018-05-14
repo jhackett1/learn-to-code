@@ -1,6 +1,7 @@
 ---
 title: Why this exists
 order: 1
+on_menu: true
 ---
 
 <p class="lede">These lessons aren't meant to make you an expert. You won't come out at the end of this course as a full-stack developer or devops engineer. That takes much longer than six months.</p>

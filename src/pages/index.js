@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import logo from './logo.png'
+import slugify from 'slugify'
 
 const CourseOverview = ({ data }) => (
   <div>
@@ -22,15 +23,25 @@ const CourseOverview = ({ data }) => (
 
     <div className="grid-row">
       <div className="column-two-thirds">
-      <h2 className="heading-large">Course overview</h2>
-      <p>New modules are released monthly.</p>
+      <h2 className="heading-large">Step by step</h2>
+      <p>New modules are released monthly. Each one should take a day or two to complete.</p>
 
       <ol className="course-overview-list">
-        {data.modules.edges.map(lesson=>(
-          <li key={lesson.node.frontmatter.title}>
-            <span className="number">{lesson.node.frontmatter.order}</span>
-            <h3 className="heading-medium">{lesson.node.frontmatter.title}</h3>
-            <p dangerouslySetInnerHTML={{ __html: lesson.node.html }}></p>
+        {data.modules.edges.map(module=>(
+          <li className="module" key={module.node.frontmatter.title}>
+            <span className="number">{module.node.frontmatter.order}</span>
+            <h3 className="heading-medium">{module.node.frontmatter.title}</h3>
+            <p dangerouslySetInnerHTML={{ __html: module.node.html }}></p>
+            <details>
+              <summary><span className="summary">Show lessons</span></summary>
+              <div>
+                {data.lessons.edges.map(lesson=>
+                  <ol className="lesson-list">
+                    {(lesson.node.frontmatter.module === module.node.frontmatter.title) ? <li><Link to={`/lesson/${slugify(lesson.node.frontmatter.title, {lower: true})}`}>{lesson.node.frontmatter.title}</Link></li> : ''}
+                  </ol>
+                )}
+              </div>
+            </details>
           </li>
         ))}
       </ol>
