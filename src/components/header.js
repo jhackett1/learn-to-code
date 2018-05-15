@@ -4,7 +4,7 @@ import slugify from 'slugify'
 
 import logo from '../../node_modules/govuk_template_ejs/assets/images/gov.uk_logotype_crown_invert_trans.png'
 
-const Header = ({ title, menu }) => (
+export default ({ title, menu }) => (
   <header role="banner" id="global-header" className='with-proposition'>
     <div className="header-wrapper">
       <div className="header-global">
@@ -29,5 +29,3 @@ const Header = ({ title, menu }) => (
     </div>
   </header>
 )
-
-export default Header

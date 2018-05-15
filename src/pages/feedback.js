@@ -16,8 +16,8 @@ export default () => (
 
     <div className="grid-row">
       <div className="column-two-thirds">
+      <form>
 
-      <form netlify name="feedback" method="POST">
         <div className="form-group">
           <fieldset>
             <legend>
@@ -27,21 +27,21 @@ export default () => (
             </legend>
             <div className="multiple-choice">
               <input id="no-experience" type="radio" name="experience" value="No experience" required/>
-              <label for="no-experience">No experience</label>
+              <label htmlFor="no-experience">No experience</label>
             </div>
             <div className="multiple-choice">
               <input id="some-experience" type="radio" name="experience" value="Some experience" required/>
-              <label for="some-experience">Some experience</label>
+              <label htmlFor="some-experience">Some experience</label>
             </div>
             <div className="multiple-choice">
               <input id="lots-experience" type="radio" name="experience" value="Lots of experience" required/>
-              <label for="lots-experience">Plenty of experience</label>
+              <label htmlFor="lots-experience">Plenty of experience</label>
             </div>
           </fieldset>
         </div>
 
         <div className="form-group">
-          <label className="form-label" for="message">
+          <label className="form-label" htmlFor="message">
             <h2 className="heading-medium">
               How can we improve DDaT Codelabs?
             </h2>
@@ -57,7 +57,6 @@ export default () => (
       </form>
 
       <p>You can discuss DDaT Codelabs on channel #ddat-codelabs on the cross-government digital Slack team.</p>
-
       <p>If you'd like to help improve DDaT Codelabs yourself, get in touch, we're always looking for volunteers, particularly content designers, user researchers and technical experts.</p>
     </div>
   </div>

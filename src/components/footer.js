@@ -2,8 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import slugify from 'slugify'
 
-const Footer = ({menu, credit}) => (
-
+export default ({menu, credit}) => (
   <footer className="group js-footer" id="footer" role="contentinfo">
     <div className="footer-wrapper">
       <div className="footer-meta">
@@ -27,7 +26,4 @@ const Footer = ({menu, credit}) => (
       </div>
     </div>
   </footer>
-
 )
-
-export default Footer

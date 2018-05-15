@@ -2,8 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import slugify from 'slugify'
+import LessonNav from '../components/lesson-nav'
 
-const LessonTemplate = ({ data }) => {
+export default ({ data }) => {
   return(
     <div>
       <Helmet
@@ -14,15 +15,16 @@ const LessonTemplate = ({ data }) => {
           <li>
             <Link to="/">DDaT Codelabs</Link>
           </li>
-          <li>{data.markdownRemark.frontmatter.module}</li>
+          <li><Link to={`/module/${slugify(data.markdownRemark.frontmatter.module, {lower: true})}`}>{data.markdownRemark.frontmatter.module}</Link></li>
           <li>{data.markdownRemark.frontmatter.title}</li>
         </ol>
       </div>
 
-      <div className="grid-row">
+      <div className="grid-row lesson-content">
         <div className="column-two-thirds">
           <h1 className="heading-xlarge">{data.markdownRemark.frontmatter.order}. {data.markdownRemark.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          <LessonNav data={data}/>
         </div>
 
         <div className="column-one-third">
@@ -31,8 +33,6 @@ const LessonTemplate = ({ data }) => {
     </div>
   )
 }
-
-export default LessonTemplate
 
 export const lessonQuery = graphql`
   query currentLessonQuery($title: String!, $module: String!){

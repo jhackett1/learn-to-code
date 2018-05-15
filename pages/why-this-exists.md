@@ -1,6 +1,6 @@
 ---
 title: Why this exists
-order: 1
+order: 3
 on_menu: true
 ---
 

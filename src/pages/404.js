@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const NotFou = () => (
+export default () => (
   <div className="grid-row">
     <div className="column-two-thirds">
     <h1 className="heading-xlarge">Page not found</h1>
@@ -10,5 +10,3 @@ const NotFou = () => (
     </div>
   </div>
 )
-
-export default NotFou

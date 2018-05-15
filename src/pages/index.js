@@ -2,8 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 import logo from './logo.png'
 import slugify from 'slugify'
+import StartButton from '../components/start-button'
 
-const CourseOverview = ({ data }) => (
+export default ({ data }) => (
   <div>
     <section className="hero">
       <div className="page-container">
@@ -11,7 +12,7 @@ const CourseOverview = ({ data }) => (
           <div className="column-two-thirds">
             <h1 className="heading-xlarge">Learn to code in six months</h1>
             <p className="lede">DDaT Codelabs are an easy way to get to know the technology behind government services.</p>
-            <Link className="button button-start" href="#" role="button">Start learning</Link>
+            <StartButton data={data}/>
             <p><Link to="/page/why-this-exists">Read about why Codelabs exists</Link></p>
           </div>
           <div className="column-one-third">
@@ -23,35 +24,35 @@ const CourseOverview = ({ data }) => (
 
     <div className="grid-row">
       <div className="column-two-thirds">
-      <h2 className="heading-large">Step by step</h2>
-      <p>New modules are released monthly. Each one should take a day or two to complete.</p>
+        <h2 className="heading-large">Step by step</h2>
+        <p>New modules are released monthly. Each one should take a day or two to complete.</p>
 
-      <ol className="course-overview-list">
-        {data.modules.edges.map(module=>(
-          <li className="module" key={module.node.frontmatter.title}>
-            <span className="number">{module.node.frontmatter.order}</span>
-            <h3 className="heading-medium">{module.node.frontmatter.title}</h3>
-            <p dangerouslySetInnerHTML={{ __html: module.node.html }}></p>
-            <details>
-              <summary><span className="summary">Show lessons</span></summary>
-              <div>
-                {data.lessons.edges.map(lesson=>
+        <ol className="course-overview-list">
+          {data.modules.edges.map(module=>(
+            <li className="module" key={module.node.frontmatter.title}>
+              <span className="number">{module.node.frontmatter.order}</span>
+              <h3 className="heading-medium">{module.node.frontmatter.title}</h3>
+              <p dangerouslySetInnerHTML={{ __html: module.node.html }}></p>
+              <details>
+                <summary><span className="summary">Show lessons</span></summary>
+                <div>
                   <ol className="lesson-list">
-                    {(lesson.node.frontmatter.module === module.node.frontmatter.title) ? <li><Link to={`/lesson/${slugify(lesson.node.frontmatter.title, {lower: true})}`}>{lesson.node.frontmatter.title}</Link></li> : ''}
+                    {data.lessons.edges.filter((lesson) => {
+                      if (lesson.node.frontmatter.module === module.node.frontmatter.title) return lesson
+                    }).map(lesson=>
+                      <li key={lesson.node.frontmatter.title} ><Link to={`/lesson/${slugify(lesson.node.frontmatter.title, {lower: true})}`}>{lesson.node.frontmatter.title}</Link></li>
+                    )}
                   </ol>
-                )}
-              </div>
-            </details>
-          </li>
-        ))}
-      </ol>
+                </div>
+              </details>
+            </li>
+          ))}
+        </ol>
 
       </div>
     </div>
   </div>
 )
-
-export default CourseOverview
 
 export const courseOverviewQuery = graphql`
   query courseOverviewQuery{

@@ -1,6 +1,8 @@
 DDaT Codelabs
 =============
 
+Currently [live on the web here](https://friendly-shaw-4ff926.netlify.com/).
+
 A static site for hosting lessons and modules in the DDaT Codelabs curriculum.
 
 This site consumes markdown documents and converts them into HTML using React component syntax and the Gatsby static site generator.

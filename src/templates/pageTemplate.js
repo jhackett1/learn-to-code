@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PageTemplate = ({ data }) => {
+export default ({ data }) => {
   return(
-    <div className="grid-row">
+    <div className="grid-row page-content">
 
       <div className="column-two-thirds">
         <h1 className="heading-xlarge">{data.markdownRemark.frontmatter.title}</h1>
@@ -11,12 +11,10 @@ const PageTemplate = ({ data }) => {
 
       <div className="column-one-third">
       </div>
-      
+
     </div>
   )
 }
-
-export default PageTemplate
 
 export const pageQuery = graphql`
   query currentPageQuery($title: String!, $order: Int!){
