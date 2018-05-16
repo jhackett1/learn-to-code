@@ -202,6 +202,18 @@ ol.lesson-list
       margin-left: 5px
 
 .plenary-quiz
-  margin-top: 30px
+  margin: 40px 0px
+  padding-top: 10px
   border-top: 1px solid #bfc1c3
-  // padding-bottom: 40px
+  .answer-icon
+    font-size: 1.5em
+    margin-left: 10px
+    display: none
+    visibility: 0
+    &.visible
+      display: inline
+      visibility: visible
+    &.correct
+      color: $button-colour
+    &.incorrect
+      color: $red
