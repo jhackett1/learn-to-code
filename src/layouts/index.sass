@@ -11,6 +11,11 @@
 @import "../../node_modules/govuk-elements-sass/public/sass/elements.scss"
 
 
+@media screen and (max-width: 641px)
+  .mobile-hide
+    display: none
+    visibility: none
+
 // Hide crown
 #global-header #logo
   background-image: none
@@ -217,3 +222,63 @@ ol.lesson-list
       color: $button-colour
     &.incorrect
       color: $red
+
+
+
+
+
+h5.minimap
+  margin-top: 25px
+ol.minimap-list
+  position: relative
+  counter-reset: my-counter
+  list-style-type: none
+  margin: 25px 0px
+  // Vertical line
+  &::before
+    content: ""
+    display: block
+    height: calc(100% - 15px)
+    border-left: solid 2px #bfc1c3
+    position: absolute
+    left: 12px
+    top: 25px
+    z-index: 1
+  // Cap at the end of the line
+  &::after
+    content: ""
+    display: block
+    border-top: solid 2px #bfc1c3
+    position: absolute
+    bottom: -10px
+    left: 6px
+    width: 15px
+    z-index: 1
+  li
+    margin-left: 45px
+    padding: 15px 0px
+    border-top: solid 2px #dee0e2
+    position: relative
+    &:before
+      content: counter(my-counter)
+      counter-increment: my-counter
+      position: absolute
+      left: -45px
+      font-weight: bold
+      border: solid 2px #bfc1c3
+      color: #bfc1c3
+      border-radius: 100%
+      width: 22px
+      height: 22px
+      text-align: center
+      font-size: 0.8em
+      line-height: 23px
+      z-index: 2
+      transform: translateY(-2px)
+      background-color: $page-colour
+    &.current
+      font-weight: bold
+      color: $text-colour
+      &::before
+        border-color: $text-colour
+        color: $text-colour
