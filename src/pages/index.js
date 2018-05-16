@@ -33,18 +33,20 @@ export default ({ data }) => (
               <span className="number">{module.node.frontmatter.order}</span>
               <h3 className="heading-medium">{module.node.frontmatter.title}</h3>
               <p dangerouslySetInnerHTML={{ __html: module.node.html }}></p>
-              <details>
-                <summary><span className="summary">Show lessons</span></summary>
-                <div>
-                  <ol className="lesson-list">
-                    {data.lessons.edges.filter((lesson) => {
-                      if (lesson.node.frontmatter.module === module.node.frontmatter.title) return lesson
-                    }).map(lesson=>
-                      <li key={lesson.node.frontmatter.title} ><Link to={`/lesson/${slugify(lesson.node.frontmatter.title, {lower: true})}`}>{lesson.node.frontmatter.title}</Link></li>
-                    )}
-                  </ol>
-                </div>
-              </details>
+              {(new Date(Date.parse(module.node.frontmatter.available_from)) < new Date() && new Date() < new Date(Date.parse(module.node.frontmatter.available_to))) ?
+                <details>
+                  <summary><span className="summary">Show lessons</span></summary>
+                  <div>
+                    <ol className="lesson-list">
+                      {data.lessons.edges.filter((lesson) => {
+                        if (lesson.node.frontmatter.module === module.node.frontmatter.title) return lesson
+                      }).map(lesson=>
+                        <li key={lesson.node.frontmatter.title}><Link to={`/lesson/${slugify(lesson.node.frontmatter.title, {lower: true})}`}>{lesson.node.frontmatter.title}</Link></li>
+                      )}
+                    </ol>
+                  </div>
+                </details>
+              : <span className="unavailable">This module is not yet available</span>}
             </li>
           ))}
         </ol>

@@ -16,7 +16,7 @@ export default ({ data }) => {
           <li>
             <Link to="/">DDaT Codelabs</Link>
           </li>
-          <li><Link to={`/module/${slugify(data.markdownRemark.frontmatter.module, {lower: true})}`}>{data.markdownRemark.frontmatter.module}</Link></li>
+          <li>{data.markdownRemark.frontmatter.module}</li>
           <li>{data.markdownRemark.frontmatter.title}</li>
         </ol>
       </div>

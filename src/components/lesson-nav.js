@@ -4,7 +4,6 @@ import slugify from 'slugify'
 
 export  default ({ allLessons, thisLesson }) => {
 
-
   let currentOrder = thisLesson.frontmatter.order
 
   let nextLesson = allLessons.edges.filter(lessonToTest => {
@@ -18,9 +17,6 @@ export  default ({ allLessons, thisLesson }) => {
       return lessonToTest
     }
   })
-
-  console.log("Next lesson", nextLesson)
-  console.log("Previous lesson", previousLesson)
 
   return(
     <div>
