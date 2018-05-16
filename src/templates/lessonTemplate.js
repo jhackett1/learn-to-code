@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import slugify from 'slugify'
 import LessonNav from '../components/lesson-nav'
+import Quiz from '../components/quiz'
 
 export default ({ data }) => {
   return(
@@ -24,9 +25,11 @@ export default ({ data }) => {
         <div className="column-two-thirds">
           <h1 className="heading-xlarge">{data.markdownRemark.frontmatter.order}. {data.markdownRemark.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-          <LessonNav data={data}/>
+          {(data.markdownRemark.frontmatter.plenary_question) ?
+            <Quiz question={data.markdownRemark.frontmatter.plenary_question} answers={data.markdownRemark.frontmatter.plenary_answers}/>
+          : ""}
+          <LessonNav allLessons={data.lessons} thisLesson={data.markdownRemark}/>
         </div>
-
         <div className="column-one-third">
         </div>
       </div>
@@ -52,6 +55,21 @@ export const lessonQuery = graphql`
         }
       }
       html
+    }
+    lessons: allMarkdownRemark (
+      sort: { order: ASC, fields: [frontmatter___order] },
+      filter: {fileAbsolutePath: {regex: "/lessons/.*$/"}}
+    ) {
+      edges {
+        node {
+          fileAbsolutePath
+          frontmatter {
+            title
+            module
+            order
+          }
+        }
+      }
     }
   }
 `
