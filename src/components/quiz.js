@@ -23,6 +23,7 @@ export default class Quiz extends React.Component{
 
     let checkAnswer = (e) => {
       e.preventDefault()
+      document.querySelector("form.plenary-quiz").reportValidity()
       if (this.state.selectedAnswer !== "") {
         this.setState({checked: true})
       }
