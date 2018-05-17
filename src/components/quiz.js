@@ -37,7 +37,7 @@ export default class Quiz extends React.Component{
             </legend>
             {answers.map((answer, i) =>(
               <div key={i} className="multiple-choice">
-                <input id={`radio-${i}`} type="radio" name="radio-group" value={answer.answer} checked={this.state.selectedAnswer === answer.answer} onChange={handleAnswerSelect} disabled={this.state.checked} />
+                <input id={`radio-${i}`} type="radio" name="radio-group" value={answer.answer} checked={this.state.selectedAnswer === answer.answer} onChange={handleAnswerSelect} disabled={this.state.checked} required/>
                 <label htmlFor={`radio-${i}`}>{answer.answer}</label>
                 {(answer.correct) ? <span className={(this.state.checked ? "answer-icon correct visible" : "answer-icon correct")}>&#10004;</span> : <span className={(this.state.checked ? "answer-icon incorrect visible" : "answer-icon incorrect")}>&#10006;</span> }
               </div>
