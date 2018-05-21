@@ -1,0 +1,63 @@
+---
+title: Introducing HTML
+module: Building webpages
+order: 2
+type: learn
+plenary_question: Classes and IDs are different because...
+plenary_answers:
+  - answer: Both should only be used once
+    correct: false
+  - answer: IDs can be used multiple times, classes should only be used once
+    correct: false
+  - answer: Classes can be used multiple times, IDs should only be used once
+    correct: true
+  - answer: Both can be used multiple times
+    correct: false
+---
+
+So far, we've been looking at very simple HTML documents.
+
+Webpages in the real world tend to be much larger than these, often with hundreds of HTML elements. In order to keep these documents meaningful, we must annotate our HTML tags with a description of their purpose.
+
+We do this with two special kinds of **attribute**:
+
+* Classes
+* IDs
+
+## Classes
+A class can be applied to many elements on a page. It is a label, created by you, the developer, and used to group HTML elements together by common purpose.
+
+We can apply a class to an element like so:
+
+```
+<div class="my-class"></div>
+```
+
+We can apply **more than one class** to an element by putting a space between them:
+
+```
+<div class="my-class my-other-class"></div>
+```
+
+Notice that we use **hyphens** to join words in class names together. This is because web browsers will interpret spaces as two separate classes.
+
+By convention, class names are also always **lowercase**.
+
+## IDs 
+IDs are very similar to classes except that they should only be applied to a single element on each page.
+
+We can apply an ID to an element like so:
+
+```
+<div id="my-id"></div>
+```
+
+All the same rules about choosing lowercase, hyphenated ID names still apply.
+
+While one element can have multiple IDs, each ID should be applied to only one element.
+
+You will see why classes and IDs are so useful when we discuss CSS later in this module.
+
+> There is no simple rule for when to use an ID or class, but the key difference is that **classes should be reused, IDs should not**.
+
+**Next, we'll [explore CSS](/module/2/lesson/5).**
