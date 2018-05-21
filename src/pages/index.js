@@ -41,7 +41,10 @@ export default ({ data }) => (
                       {data.lessons.edges.filter((lesson) => {
                         if (lesson.node.frontmatter.module === module.node.frontmatter.title) return lesson
                       }).map(lesson=>
-                        <li key={lesson.node.frontmatter.title}><Link to={`/lesson/${slugify(lesson.node.frontmatter.title, {lower: true})}`}>{lesson.node.frontmatter.title}</Link></li>
+                        <li key={lesson.node.frontmatter.title}>
+                          <Link to={`/lesson/${slugify(lesson.node.frontmatter.title, {lower: true})}`}>{lesson.node.frontmatter.title}</Link>
+                          {(lesson.node.frontmatter.type === 'project') ? <span className="project-badge">P</span> : ""}
+                        </li>
                       )}
                     </ol>
                   </div>

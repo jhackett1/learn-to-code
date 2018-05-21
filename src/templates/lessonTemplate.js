@@ -35,11 +35,12 @@ export default ({ data }) => {
           <ol className="minimap-list">
 
             {data.lessons.edges.filter(lesson => {
-              if (lesson.node.frontmatter.module === data.markdownRemark.frontmatter.module) {
-                return lesson
-              }
+              if (lesson.node.frontmatter.module === data.markdownRemark.frontmatter.module) return lesson
             }).map((lesson, i) => (
-              <li key={i} className={(lesson.node.frontmatter.title === data.markdownRemark.frontmatter.title) ? "current" : ""}>{lesson.node.frontmatter.title}</li>
+              <li key={i} className={(lesson.node.frontmatter.title === data.markdownRemark.frontmatter.title) ? "current" : ""}>
+              {lesson.node.frontmatter.title}
+              {(lesson.node.frontmatter.type === 'project') ? <span className="project-badge">P</span> : ""}
+              </li>
             ))}
 
           </ol>
@@ -77,6 +78,7 @@ export const lessonQuery = graphql`
           fileAbsolutePath
           frontmatter {
             title
+            type
             module
             order
           }
