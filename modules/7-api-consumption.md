@@ -1,7 +1,7 @@
 ---
 title: API consumption
 order: 7
-available_from: "2018, 05"
+available_from: "2019, 12"
 available_to: "2019, 12"
 ---
 
