@@ -1,0 +1,29 @@
+---
+title: Turn your prototypes into webpages
+module: Building webpages
+order: 11
+type: learn
+---
+
+Now, we're going to take the paper prototypes we created in the last module and translate them into webpages, using our new HTML and CSS knowledge.
+
+You'll need;
+
+* The user stories for your app.
+* Your paper prototypes from the previous module.
+* Basic knowledge of HTML and CSS.
+
+This is a good chance to revisit your original user stories and decide whether your drawings are still the best way to meet those needs.
+
+You may want to refine your drawings first based on your new HTML and CSS knowledge.
+
+<div class="todo">
+		<h2>To-do</h2>
+		<ol>
+		    <li>Create a new pen in Codepen for each screen you drew in the last module.</li>
+				<li>Write the necessary HTML and CSS for what you want the user to see on each screen.</li>
+				<li>Get feedback on your work from fellow learners.</li>				
+		</ol>
+</div>
+
+<div class="inset">Consider <a href="/feedback">leaving feedback</a> for this module.</div>
