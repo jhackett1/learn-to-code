@@ -1,7 +1,7 @@
 ---
 title: Adding interactivity
 order: 4
-available_from: "2018, 05"
+available_from: "2019, 12"
 available_to: "2019, 12"
 ---
 
