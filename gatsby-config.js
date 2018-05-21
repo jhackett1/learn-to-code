@@ -26,8 +26,23 @@ module.exports = {
         name: "pages",
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-remark-copy-linked-files`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 900,
+              linkImagesToOriginal: false
+            },
+          },
+        ],
+      },
+    },
   ]
 }
