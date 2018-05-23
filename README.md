@@ -3,15 +3,12 @@ DDaT Codelabs
 
 A static site for hosting lessons and modules in the DDaT Codelabs curriculum.
 
-This site consumes markdown documents and converts them into HTML using React component syntax and the Gatsby static site generator.
+This site consumes markdown documents and converts them into HTML using React component syntax and the Gatsby static site generator. Changes here automatically affect the live site.
 
 This site understands three kinds of content:
-
 * **Lessons**, which hold course content and plenary quizzes.
 * **Modules**, which have a one-to-many relationship with lessons.
 * **Pages**, which store background info about the course
-
-Advanced features like the interactive plenary quizzes are also supported.
 
 Currently [live on the web here](https://friendly-shaw-4ff926.netlify.com/).
 
