@@ -15,6 +15,8 @@ Advanced features like the interactive plenary quizzes are also supported.
 
 Currently [live on the web here](https://friendly-shaw-4ff926.netlify.com/).
 
+**We value contributions from everyone. Pull requests and issues are welcome.**
+
 Before contributing
 ------------------
 
