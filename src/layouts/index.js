@@ -64,11 +64,7 @@ class Layout extends React.Component{
           ]}
         />
         <Header title={data.site.siteMetadata.title} menu={data.pages}/>
-        <div id="global-header-bar"></div>
         <main id="content">
-          <div className="phase-banner">
-            <p><strong className="phase-tag">ALPHA</strong><span>This is a new service – your <Link to={"/feedback"}>feedback</Link> will help us to improve it.</span></p>
-          </div>
           {children()}
         </main>
         <Footer menu={data.pages} credit={data.site.siteMetadata.credit}/>

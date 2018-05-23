@@ -3,11 +3,15 @@ import Link from 'gatsby-link'
 import logo from './logo.png'
 import slugify from 'slugify'
 import StartButton from '../components/start-button'
+import PhaseBanner from '../components/phase-banner'
 
 export default ({ data }) => (
   <div>
+
     <section className="hero">
+
       <div className="page-container">
+      <PhaseBanner />
         <div className="grid-row">
           <div className="column-two-thirds">
             <h1 className="heading-xlarge">Learn to code in six months</h1>

@@ -43,7 +43,7 @@ export  default ({ allLessons, thisLesson }) => {
               </svg></span>
               <span className="label">{nextLesson[0].node.frontmatter.title}</span>
             </Link>
-          : ""}
+          : "" }
         </div>
       </nav>
     </div>

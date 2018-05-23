@@ -4,10 +4,12 @@ import Helmet from 'react-helmet'
 import slugify from 'slugify'
 import LessonNav from '../components/lesson-nav'
 import Quiz from '../components/quiz'
+import PhaseBanner from '../components/phase-banner'
 
 export default ({ data }) => {
   return(
     <div>
+      <PhaseBanner showHeaderBar />
       <Helmet
         title={`${data.markdownRemark.frontmatter.order}. ${data.markdownRemark.frontmatter.title}`}
       />

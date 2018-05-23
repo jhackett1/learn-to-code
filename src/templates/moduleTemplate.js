@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import PhaseBanner from '../components/phase-banner'
 
 export default ({ data }) => {
   return(
     <div>
+      <PhaseBanner showHeaderBar />
       <div className="breadcrumbs">
         <ol role="breadcrumbs">
           <li>
