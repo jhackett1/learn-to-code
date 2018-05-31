@@ -1,5 +1,5 @@
 ---
-title: Preface
+title: Get started
 order: 1
 available_from: "2018, 05"
 available_to: "2019, 12"
