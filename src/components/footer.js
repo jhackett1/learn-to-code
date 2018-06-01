@@ -11,7 +11,7 @@ export default ({menu, credit}) => (
             {menu.edges.map(page=>(
               <li key={page.node.frontmatter.title}><Link to={`/page/${slugify(page.node.frontmatter.title, {lower: true})}`}>{page.node.frontmatter.title}</Link></li>
             ))}
-            <li><Link to={`/feedback`}>Feedback</Link></li>
+            <li><a href="https://goo.gl/forms/bEhlqyyddQIWRZqB2">Feedback</a></li>
             <li>{credit}</li>
           </ul>
           <div className="open-government-licence">
