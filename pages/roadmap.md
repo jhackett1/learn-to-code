@@ -6,6 +6,8 @@ on_menu: true
 
 <p class="lede">We are always improving the DDaT Codelabs curriculum and teaching methods. Here's what to expect.</p>
 
+You can see what we're currently working on at [our team Trello board](https://trello.com/b/jYuomh35/ddat-codelabs)
+
 ## Spring 2018
 
 - User research project in alpha phase

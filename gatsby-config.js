@@ -4,6 +4,15 @@ module.exports = {
     credit: 'Built and maintained by DDaT Fast Streamers'
   },
   plugins: [
+  {
+       resolve: `gatsby-plugin-google-analytics`,
+       options: {
+         trackingId: "UA-91311733-7",
+         head: false,
+         anonymize: true,
+         respectDNT: true,
+       },
+     },
     // Ingest markdown files from three locations
     {
       resolve: `gatsby-source-filesystem`,
