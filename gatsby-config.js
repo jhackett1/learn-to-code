@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'DDaT Codelabs',
+    title: 'Learn to code',
     credit: 'Built and maintained by DDaT Fast Streamers'
   },
   plugins: [
