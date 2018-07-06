@@ -13,9 +13,9 @@ That said, they will help you learn:
 * Parts of the [Digital Service Standard ](https://www.gov.uk/service-manual/service-standard) (soon to be the Government Service Standard)
 * The [technology section of the Service Manual](https://www.gov.uk/service-manual/technology)
 
-Most of all, Codelabs exist to show that **learning to code doesn't need to be daunting**.
+Most of all, Learn to code exists to show that **learning to code doesn't need to be daunting**.
 
 ## The team
 These lessons are created and maintained by a volunteer team of DDaT fast streamers.
 
-We're always looking for new subject matter experts, content designers and user researchers to refine our offering. If you'd like to help us iterate and improve DDaT Codelabs, [get in touch](mailto:ddatcodelabs@gmail.com).
+We're always looking for new subject matter experts, content designers and user researchers to refine our offering. If you'd like to help us iterate and improve Learn to code, [get in touch](mailto:ddatcodelabs@gmail.com).
