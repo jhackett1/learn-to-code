@@ -14,10 +14,10 @@ export default ({ data }) => (
       <PhaseBanner />
         <div className="grid-row">
           <div className="column-two-thirds">
-            <h1 className="heading-xlarge">Learn to code in six months</h1>
+            <h1 className="heading-xlarge">Build a web app in six months</h1>
             <p className="lede">DDaT Codelabs are an easy way to get to know the technology behind government services.</p>
             <StartButton data={data}/>
-            <p><Link to="/page/why-this-exists">Read about why Codelabs exists</Link></p>
+            <p><Link to="/page/why-this-exists">Read about why this exists</Link></p>
           </div>
           <div className="column-one-third">
             <img src={logo} alt="Learn to code"/>
