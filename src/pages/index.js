@@ -15,7 +15,7 @@ export default ({ data }) => (
         <div className="grid-row">
           <div className="column-two-thirds">
             <h1 className="heading-xlarge">Build a web app in six months</h1>
-            <p className="lede">Learn to code is a series of interactive lessons, teaching the technology behind government services.</p>
+            <p className="lede">Learn to code is a series of lessons on the technology behind government services.</p>
             <StartButton data={data}/>
             <p><Link to="/page/why-this-exists">Read about why this exists</Link></p>
           </div>
