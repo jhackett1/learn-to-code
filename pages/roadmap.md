@@ -4,7 +4,7 @@ order: 2
 on_menu: true
 ---
 
-<p class="lede">We are always improving the DDaT Codelabs curriculum and teaching methods. Here's what to expect.</p>
+<p class="lede">We are always improving the curriculum and teaching methods. Here's what to expect.</p>
 
 You can see what we're currently working on at [our team Trello board](https://trello.com/b/jYuomh35/ddat-codelabs)
 
