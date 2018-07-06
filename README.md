@@ -1,4 +1,4 @@
-DDaT Codelabs
+Learn to code
 =============
 
 A static site for hosting lessons and modules in the DDaT Codelabs curriculum.
