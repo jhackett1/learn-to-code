@@ -10,4 +10,4 @@ We publish a new module every month, so everyone is learning the same material a
 
 If you get stuck, post in the *#learn-to-codes* channel on the cross-government digital Slack.
 
-If you can't access that Slack team, you can [email the Codelabs volunteers](mailto:ddatcodelabs@gmail.com) instead.
+If you can't access that Slack team, you can [email our volunteers](mailto:ddatcodelabs@gmail.com) instead.
