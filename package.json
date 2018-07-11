@@ -19,6 +19,7 @@
     "govuk-elements-sass": "^3.1.2",
     "govuk_frontend_toolkit": "^7.5.0",
     "govuk_template_ejs": "^0.24.0",
+    "moment": "^2.22.2",
     "npm": "^6.0.1",
     "react-helmet": "^5.2.0",
     "slugify": "^1.2.9"

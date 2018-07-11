@@ -33,6 +33,14 @@ exports.createPages = ({boundActionCreators, graphql}) => {
           }
         }
       }
+      files: allFile {
+        edges {
+          node {
+            absolutePath
+            modifiedTime
+          }
+        }
+      }
       modules: allMarkdownRemark (
         sort: { order: ASC, fields: [frontmatter___order] },
         filter: {fileAbsolutePath: {regex: "/modules/.*$/"}}
@@ -70,6 +78,8 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     }
 
     result.data.lessons.edges.forEach(({ node }) => {
+
+      // Create the lessons
       createPage({
         path: `lesson/${slugify(node.frontmatter.title, {
           lower: true
