@@ -13,6 +13,9 @@ import favicon from '../../node_modules/govuk_template_ejs/assets/images/favicon
 
 import './index.sass'
 
+// Prism theme
+require("prismjs/themes/prism.css");
+
 class Layout extends React.Component{
 
   componentDidMount(){

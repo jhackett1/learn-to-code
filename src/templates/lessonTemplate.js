@@ -21,8 +21,6 @@ export default class LessonTemplate extends React.Component{
       })[0].node.modifiedTime
 
     lastModified = new Date(lastModified)
-
-    console.log(data)
     return(
       <div>
         <PhaseBanner showHeaderBar />
