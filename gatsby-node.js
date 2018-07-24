@@ -50,8 +50,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             frontmatter {
               title
               order
-              available_from
-              available_to
+              visible
             }
             html
     	    }

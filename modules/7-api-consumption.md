@@ -1,8 +1,7 @@
 ---
 title: API consumption
 order: 7
-available_from: "2019, 12"
-available_to: "2019, 12"
+visible: false
 ---
 
 Improve your app by using data from a third-party API.

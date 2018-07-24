@@ -32,8 +32,7 @@ export const moduleQuery = graphql`
       frontmatter {
         title
         order
-        available_from
-        available_to
+        visible
       }
       html
     }

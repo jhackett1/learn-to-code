@@ -1,8 +1,7 @@
 ---
 title: Adding interactivity
 order: 4
-available_from: "2015, 12"
-available_to: "2019, 12"
+visible: true
 ---
 
 Make your web pages interactive using the javascript programming language, and start keeping track of your changes using git.

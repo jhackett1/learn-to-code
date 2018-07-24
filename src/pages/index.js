@@ -37,7 +37,7 @@ export default ({ data }) => (
               <span className="number">{module.node.frontmatter.order}</span>
               <h3 className="heading-medium">{module.node.frontmatter.title}</h3>
               <p dangerouslySetInnerHTML={{ __html: module.node.html }}></p>
-              {(new Date(Date.parse(module.node.frontmatter.available_from)) < new Date() && new Date() < new Date(Date.parse(module.node.frontmatter.available_to))) ?
+              {(module.node.frontmatter.visible) ?
                 <details>
                   <summary><span className="summary">Show lessons</span></summary>
                   <div>
@@ -89,8 +89,7 @@ export const courseOverviewQuery = graphql`
           frontmatter {
             title
             order
-            available_from
-            available_to
+            visible
           }
           html
         }
