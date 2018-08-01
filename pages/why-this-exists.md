@@ -4,14 +4,14 @@ order: 3
 on_menu: true
 ---
 
-<p class="lede">These lessons aren't meant to make you an expert. You won't come out at the end of this course as a full-stack developer or devops engineer. That takes much longer than six months.</p>
+<p class="lede">These lessons aren't meant to make you an expert. You won't come out at the end of this course as a full-stack developer or cloud engineer. That takes much longer than six months.</p>
 
 That said, they will help you learn:
 
-* Programming fundamentals
 * The ideas and technology responsible for the world wide web
-* Parts of the [Digital Service Standard ](https://www.gov.uk/service-manual/service-standard) (soon to be the Government Service Standard)
+* Parts of the [Government Service Standard ](https://www.gov.uk/service-manual/service-standard)
 * The [technology section of the Service Manual](https://www.gov.uk/service-manual/technology)
+* How the [GOV.UK prototyping kit](https://govuk-prototype-kit.herokuapp.com/docs) works
 
 Most of all, Learn to code exists to show that **learning to code doesn't need to be daunting**.
 
