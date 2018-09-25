@@ -58,4 +58,4 @@ Modules have frontmatter used to track:
 * It's **order** in the course
 * Whether the lessons inside should be **visible** for users
 
-Pages also have an order property to track their position on the header menu.
+Pages also have an order property that determines their position on the header menu.
