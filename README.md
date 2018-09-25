@@ -56,9 +56,6 @@ Modules have frontmatter used to track:
 
 * The module **title**
 * It's **order** in the course
-* When it should be available **from**, in YYYY, MM format
-* When it should be available **to**, in YYYY, MM format
-
-Modules are visible but their lessons are inaccessible when the date is outside the given range.
+* Whether the lessons inside should be **visible** for users
 
 Pages also have an order property to track their position on the header menu.
