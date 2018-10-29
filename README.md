@@ -10,7 +10,7 @@ This site understands three kinds of content:
 * **Modules**, which have a one-to-many relationship with lessons.
 * **Pages**, which store background info about the course
 
-**Currently [live on the web here](https://bit.ly/ddat-learn-code).**
+**Currently [live on the web here](https://ddatlearntocode.netlify.com/).**
 
 **We value contributions from everyone. Pull requests and issues are welcome.**
 
