@@ -68,8 +68,10 @@ You can make minor tweaks to this right here on the web, but for major work, you
 You need `git`, `node` and `npm` installed first.
 
 1. Install the Gatsby CLI commands with `npm install --global gatsby-cli`
-2. Download this repo with `git clone`.
+2. Download this repo with `git clone https://github.com/jhackett1/learn-to-code`.
 3. Install the dependencies with `npm install`.
 4. Run the software with `gatsby develop`. You should be able to access it on port 8000.
 
 Like all Gatsby sites, you can also build graphQL queries using graphiQL, which should be available at `localhost:8000/___graphql`.
+
+When you're finished, commit your changes and Netlify's CI server will try to deploy them.
