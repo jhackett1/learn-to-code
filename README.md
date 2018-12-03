@@ -59,3 +59,17 @@ Modules have frontmatter used to track:
 * Whether the lessons inside should be **visible** for users
 
 Pages also have an order property that determines their position on the header menu.
+
+Developing locally
+------------------
+
+You can make minor tweaks to this right here on the web, but for major work, you should download and run the software locally. This will give you real-time feedback and a nicer developer experience.
+
+You need `git`, `node` and `npm` installed first.
+
+1. Install the Gatsby CLI commands with `npm install --global gatsby-cli`
+2. Download this repo with `git clone`.
+3. Install the dependencies with `npm install`.
+4. Run the software with `gatsby develop`. You should be able to access it on port 8000.
+
+Like all Gatsby sites, you can also build graphQL queries using graphiQL, which should be available at `localhost:8000/___graphql`.
